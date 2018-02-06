@@ -1,0 +1,23 @@
+header {
+  .menu.secondary,
+  .logo {
+    display: none;
+  }
+  #block-locale-language,
+  .language-switcher-locale-url {
+    float: right;
+    ul {
+      margin: 0;
+      list-style-type: none;
+      li.active {
+        display: none;
+      }
+      a {
+        text-decoration: none;
+        font-size: 16px;
+        padding: 10px 0;
+        display: block;
+      }
+    }
+  }
+}
