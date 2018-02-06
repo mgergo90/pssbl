@@ -1,0 +1,33 @@
+version: "3"
+
+services:
+  app:
+    image: gary90/drupal-skeleton
+    volumes:
+      - ".:/var/www/html"
+    working_dir: "/var/www/html"
+    ports:
+      - "8000:80"
+    command:
+      - /var/www/html/helpers/install.sh
+
+  mysql:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: drupal
+      MYSQL_DATABASE: drupal
+      MYSQL_USER: drupal
+      MYSQL_PASSWORD: drupal
+
+  node:
+    image: node:8.2
+    command: "npm"
+    depends_on:
+      - "app"
+    volumes:
+      - ".:/var/www/html"
+    working_dir: "/var/www/html"
+    command:
+      - /var/www/html/helpers/compile.sh
+    environment:
+      HOME: /tmp/node
