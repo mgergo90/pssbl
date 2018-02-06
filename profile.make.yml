@@ -1,0 +1,45 @@
+api: 2
+core: 7.x
+
+projects:
+  drupal:
+    version: "7.56"
+  bootstrap:
+    version: "3.19"
+  domain:
+    version: "3.14"
+  features:
+    version: "2.10"
+  admin_menu:
+    version: "3.0-rc5"
+  jquery_update:
+    version: "2.7"
+  domain_locale:
+    version: "1.0-beta6"
+  views:
+    version: "3.18"
+  link:
+    version: "1.4"
+  ctools:
+    version: "1.13"
+  i18n:
+    version: "1.22"
+  variable:
+    version: "2.5"
+  strongarm:
+    version: "2.0"
+  features_extra:
+    version: "1.0"
+  owlcarousel:
+    version: "1.6"
+  libraries:
+    version: "2.3"
+  breakpoints:
+    version: "1.4"
+  picture:
+   version: "2.13"
+libraries:
+  owl-carousel:
+    download:
+      type: "file"
+      url: "https://github.com/OwlCarousel2/OwlCarousel2/archive/2.2.1.zip"
