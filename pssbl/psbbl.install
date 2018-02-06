@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * @file
+ *   Pssbl install file.
+ */
+
+/**
+ * Implement hook_install()
+ */
+function pssbl_install() {
+  $default_theme = 'pssbl_theme';
+  theme_enable(array('seven', 'bootstrap', $default_theme));
+  variable_set('admin_theme', 'seven');
+  variable_set('site_email', 'admin@example.com');
+  variable_set('theme_default', $default_theme);
+  theme_disable(array('bartik'));
+
+  variable_set('clean_url', 1);
+  variable_set('jquery_update_jquery_version', '1.10');
+  variable_set('install_profile', 'pssbl');
+  variable_set('site_name', 'Demo site');
+}

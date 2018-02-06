@@ -1,0 +1,24 @@
+name = Pssbl page profile
+description = Pssbl demo site
+core = 7.x
+
+; Install necessary core modules.
+dependencies[] = block
+dependencies[] = image
+dependencies[] = list
+dependencies[] = menu
+dependencies[] = number
+dependencies[] = options
+dependencies[] = path
+dependencies[] = taxonomy
+dependencies[] = dblog
+dependencies[] = field_ui
+dependencies[] = file
+dependencies[] = locale
+dependencies[] = admin_menu
+dependencies[] = features
+
+
+dependencies[] = pssbl_settings_export
+
+dependencies[] = pssbl_site

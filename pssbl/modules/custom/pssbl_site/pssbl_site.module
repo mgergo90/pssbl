@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * @file
+ *   Possbile site module file
+ */
+
+/**
+ *  Implements hook_form_alter().
+ */
+function pssbl_site_form_alter(&$form, &$form_state, $form_id) {
+    if ($form_id == 'slider_node_form') {
+        global $user;
+        $editorRole = user_role_load_by_name('Editor');
+        if (user_has_role($editorRole->rid) && $user->language) {
+            $form['language']['#access'] = false;
+        }
+    }
+}
+
